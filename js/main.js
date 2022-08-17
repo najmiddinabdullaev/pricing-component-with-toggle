@@ -2,8 +2,8 @@ const elsPaymentPeriodRadio = document.querySelectorAll('[name="payment_period"]
 const elsPricingPlanValue = document.querySelectorAll('.pricing-plan-value');
 
 elsPaymentPeriodRadio.forEach(function (elPaymentPeriodRadio) {
-  elPaymentPeriodRadio.addEvenListener('change', function () {
-    const period = elsPaymentPeriodRadio.value;
+  elPaymentPeriodRadio.addEventListener('change', function () {
+    const period = elPaymentPeriodRadio.value;
 
     if ( period === 'annual') {
       elsPricingPlanValue.forEach(function (elPrice) {
